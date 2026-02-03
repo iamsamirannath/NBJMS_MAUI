@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui">
+    <Style x:Key="TitlePrimary" TargetType="Label">
+        <Setter Property="FontSize" Value="26" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+    </Style>
+    <Style x:Key="TitleSubtitle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="{StaticResource SecondaryText}" />
+    </Style>
+    <Style x:Key="TitleMeta" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="{StaticResource MutedText}" />
+    </Style>
+    <Style x:Key="LabelCaption" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="{StaticResource SecondaryText}" />
+    </Style>
+    <Style x:Key="StatPrimary" TargetType="Label">
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource AccentGreen}" />
+    </Style>
+    <Style x:Key="StatSecondary" TargetType="Label">
+        <Setter Property="FontSize" Value="22" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource AccentRed}" />
+    </Style>
+    <Style x:Key="HighlightText" TargetType="Label">
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource HighlightTextColor}" />
+    </Style>
+    <Style x:Key="TagText" TargetType="Label">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="TextColor" Value="{StaticResource HighlightTextColor}" />
+    </Style>
+    <Style x:Key="ActionTitle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+    </Style>
+    <Style x:Key="ActionSubtitle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="{StaticResource SecondaryText}" />
+    </Style>
+    <Style x:Key="SectionTitle" TargetType="Label">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+    </Style>
+    <Style x:Key="ItemTitle" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+    </Style>
+    <Style x:Key="ItemSubtitle" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="{StaticResource SecondaryText}" />
+    </Style>
+    <Style x:Key="ItemAmount" TargetType="Label">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontAttributes" Value="Bold" />
+        <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+        <Setter Property="HorizontalTextAlignment" Value="End" />
+    </Style>
+    <Style x:Key="ItemMeta" TargetType="Label">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="TextColor" Value="{StaticResource MutedText}" />
+        <Setter Property="HorizontalTextAlignment" Value="End" />
+    </Style>
+</ResourceDictionary>

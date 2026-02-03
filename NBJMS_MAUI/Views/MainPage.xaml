@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NBJMS_MAUI.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:NBJMS_MAUI.Models"
+    Title="Member Overview"
+    BackgroundColor="{StaticResource PageBackground}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <VerticalStackLayout Spacing="20" Padding="24">
+                <VerticalStackLayout Spacing="6">
+                    <Label Text="Welcome back," Style="{StaticResource TitleSubtitle}" />
+                    <Label Text="Amara Nwosu" Style="{StaticResource TitlePrimary}" />
+                    <Label Text="Member ID: NBJMS-2041" Style="{StaticResource TitleMeta}" />
+                </VerticalStackLayout>
+
+                <Frame BackgroundColor="{StaticResource CardBackground}" CornerRadius="18" HasShadow="True" Padding="20">
+                    <VerticalStackLayout Spacing="16">
+                        <Grid ColumnDefinitions="*,*">
+                            <VerticalStackLayout>
+                                <Label Text="Savings Balance" Style="{StaticResource LabelCaption}" />
+                                <Label Text="$8,450.00" Style="{StaticResource StatPrimary}" />
+                            </VerticalStackLayout>
+                            <VerticalStackLayout HorizontalOptions="End">
+                                <Label Text="Loan Balance" Style="{StaticResource LabelCaption}" />
+                                <Label Text="$2,100.00" Style="{StaticResource StatSecondary}" />
+                            </VerticalStackLayout>
+                        </Grid>
+                        <Frame BackgroundColor="{StaticResource HighlightBackground}" CornerRadius="12" Padding="12">
+                            <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                                <Label Text="Next contribution" Style="{StaticResource LabelCaption}" />
+                                <Label Text="Sep 30" Style="{StaticResource HighlightText}" />
+                                <Label Text="Auto-pay enabled" Style="{StaticResource TagText}" />
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </VerticalStackLayout>
+                </Frame>
+
+                <HorizontalStackLayout Spacing="12">
+                    <Frame BackgroundColor="{StaticResource ActionBackground}" CornerRadius="16" Padding="16" HorizontalOptions="FillAndExpand">
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="Contribute" Style="{StaticResource ActionTitle}" />
+                            <Label Text="Add savings" Style="{StaticResource ActionSubtitle}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="{StaticResource ActionBackground}" CornerRadius="16" Padding="16" HorizontalOptions="FillAndExpand">
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="Withdraw" Style="{StaticResource ActionTitle}" />
+                            <Label Text="Emergency funds" Style="{StaticResource ActionSubtitle}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="{StaticResource ActionBackground}" CornerRadius="16" Padding="16" HorizontalOptions="FillAndExpand">
+                        <VerticalStackLayout Spacing="6">
+                            <Label Text="Request Loan" Style="{StaticResource ActionTitle}" />
+                            <Label Text="Flexible plans" Style="{StaticResource ActionSubtitle}" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </HorizontalStackLayout>
+
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="Recent Activity" Style="{StaticResource SectionTitle}" />
+                    <CollectionView ItemsSource="{Binding Transactions}" SelectionMode="None">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:MemberTransaction">
+                                <Frame BackgroundColor="{StaticResource CardBackground}" CornerRadius="14" Padding="14" Margin="0,0,0,10">
+                                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto" ColumnSpacing="10">
+                                        <Label Text="{Binding Title}" Style="{StaticResource ItemTitle}" />
+                                        <Label Text="{Binding Amount, StringFormat='{}{0:C}'}" Grid.Column="1" Style="{StaticResource ItemAmount}" />
+                                        <Label Text="{Binding Description}" Grid.Row="1" Style="{StaticResource ItemSubtitle}" />
+                                        <Label Text="{Binding Date, StringFormat='{}{0:MMM dd}'}" Grid.Column="1" Grid.Row="1" Style="{StaticResource ItemMeta}" />
+                                    </Grid>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </VerticalStackLayout>
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
